@@ -1,12 +1,13 @@
-import {addNote, removeNote} from "./store/store";
+import {addNote, changeNote, removeNote} from "./store/store";
 
 export type AppState = {
     notes: NoteType[];
 };
 
 export type Actions =
-    | ReturnType<typeof addNote>
-    | ReturnType<typeof removeNote>;
+  | ReturnType<typeof addNote>
+  | ReturnType<typeof removeNote>
+  | ReturnType<typeof changeNote>;
 
 export enum NoteStatus {
     Waiting,
@@ -23,5 +24,6 @@ export type NoteType = {
 
 export enum ActionTypes {
     ADD_NOTE,
-    REMOVE_NOTE
+    REMOVE_NOTE,
+    CHANGE_NOTE
 }

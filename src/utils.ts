@@ -16,6 +16,7 @@ export function getDateTime(time: number) {
   const hours = Math.trunc(seconds / 3600);
   seconds -= hours * 3600;
   const minutes = Math.trunc(seconds / 60);
+  if (minutes === 0) return 'Few seconds';
   const arr = [
     { value: years, name: 'y' },
     { value: months, name: 'm' },

@@ -15,6 +15,13 @@ export function removeNote(id: string) {
     } as const;
 }
 
+export function changeNote(note: NoteType) {
+    return {
+        type: ActionTypes.CHANGE_NOTE,
+        payload: note,
+    } as const;
+}
+
 function reducer(
     state: NoteType[] = [],
     action: Actions
@@ -30,8 +37,17 @@ function reducer(
             break;
         case ActionTypes.REMOVE_NOTE:
             result = state.filter(
-                (note) => note.id !== action.payload
+              (note) => note.id !== action.payload
             );
+            break;
+        case ActionTypes.CHANGE_NOTE:
+            const newState = [...state];
+            newState.forEach((element, index) => {
+                if (element.id === action.payload.id) {
+                    newState[index] = action.payload;
+                }
+            });
+            result = newState;
             break;
     }
 

@@ -1,11 +1,13 @@
 @import '../../../styles/variables.scss';
 
 .note {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   flex: 1;
-
   min-width: 200px;
-  border-bottom-width: 5px;
-  border-bottom-style: solid;
+  border-left-width: 5px;
+  border-left-style: solid;
   box-sizing: border-box;
   .content {
     max-height: 300px;
@@ -15,6 +17,9 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: $quantum / 2;
+    .result {
+      padding: 0 8px;
+    }
   }
 }
