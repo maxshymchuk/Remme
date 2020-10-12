@@ -22,7 +22,9 @@ export function Notes() {
   );
 
   const handleView = (value: string) => {
-    setView(View[value as View]);
+    if (value !== null) {
+      setView(View[value as View]);
+    }
   }
 
   return (
