@@ -11,6 +11,7 @@
   box-sizing: border-box;
   .content {
     max-height: 300px;
+    overflow-wrap: break-word;
     overflow-y: auto;
   }
   .action {
