@@ -1,7 +1,7 @@
 import {combineReducers, createStore, Store} from "redux";
-import {Actions, ActionTypes, AppState, Note} from "../types";
+import {Actions, ActionTypes, AppState, NoteType} from "../types";
 
-export function addNote(note: Note) {
+export function addNote(note: NoteType) {
     return {
         type: ActionTypes.ADD_NOTE,
         payload: note,
@@ -16,12 +16,13 @@ export function removeNote(id: string) {
 }
 
 function reducer(
-    state: Note[] = [],
+    state: NoteType[] = [],
     action: Actions
 ) {
+
     const storage = localStorage.getItem('notes');
 
-    let result = storage ? JSON.parse(storage) as Note[] : state;
+    let result = storage ? JSON.parse(storage) as NoteType[] : state;
 
     switch (action.type) {
         case ActionTypes.ADD_NOTE:
