@@ -1,0 +1,23 @@
+@import '../../styles/variables.scss';
+
+.notes {
+  margin-bottom: 5 * $quantum;
+  .settings {
+    display: flex;
+    justify-content: space-between;
+    margin: $quantum;
+  }
+  .list,
+  .grid {
+    display: flex;
+    align-content: flex-start;
+    gap: $quantum;
+    margin: $quantum;
+  }
+  .list {
+    flex-direction: column;
+  }
+  .grid {
+    flex-wrap: wrap;
+  }
+}

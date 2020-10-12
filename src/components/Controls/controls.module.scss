@@ -1,0 +1,59 @@
+@import '../../styles/variables.scss';
+
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 0 10px #00000011;
+  }
+  to {
+    box-shadow: 0 0 0 0 #00000011;
+  }
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: $quantum;
+  padding: $quantum;
+  position: sticky;
+  top: 0;
+  z-index: $max-zindex;
+  margin: $quantum 0;
+  .control_panel {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $quantum;
+    justify-content: space-between;
+    .additional {
+      display: flex;
+      gap: $quantum;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    .button {
+      align-self: center;
+    }
+  }
+}
+
+.color {
+  .color_label {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #000;
+    box-sizing: border-box;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+    animation: pulse 2s infinite alternate;
+  }
+  .color_picker {
+    display: none;
+  }
+}
+
+.importance {
+  display: flex;
+  align-items: center;
+}
