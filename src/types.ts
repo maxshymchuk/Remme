@@ -1,7 +1,7 @@
 import {addNote, removeNote} from "./store/store";
 
 export type AppState = {
-    notes: Note[];
+    notes: NoteType[];
 };
 
 export type Actions =
@@ -13,16 +13,10 @@ export enum NoteStatus {
     Completed
 }
 
-export enum NoteType {
-    Usual,
-    Important
-}
-
-export type Note = {
+export type NoteType = {
     id: string,
     text: string,
     endTime: number,
-    type: NoteType,
     status: NoteStatus,
     color: string
 }
