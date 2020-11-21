@@ -13,6 +13,7 @@
     "date-fns": "^2.16.1",
     "dateformat": "^3.0.3",
     "material-ui-color-picker": "^3.5.1",
+    "moment": "^2.29.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.1",
@@ -44,6 +45,7 @@
   },
   "devDependencies": {
     "@types/dateformat": "^3.0.1",
+    "@types/moment": "^2.13.0",
     "@types/react-dom": "^16.9.8",
     "@types/react-redux": "^7.1.9",
     "@types/uniqid": "^5.2.0",

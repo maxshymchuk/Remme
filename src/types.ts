@@ -17,7 +17,7 @@ export enum NoteStatus {
 export type NoteType = {
     id: string,
     text: string,
-    endTime: number,
+    expired: number,
     status: NoteStatus,
     color: string
 }
@@ -26,4 +26,9 @@ export enum ActionTypes {
     ADD_NOTE,
     REMOVE_NOTE,
     CHANGE_NOTE
+}
+
+export enum Intervals {
+    SECOND = 1000,
+    MINUTE = 1000 * 60
 }

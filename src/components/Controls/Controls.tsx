@@ -8,11 +8,11 @@ import {NoteType, NoteStatus} from "../../types";
 import uniqid from 'uniqid';
 import {useDispatch} from "react-redux";
 import {addNote} from "../../store/store";
-import {getDelta} from "../../utils";
+import moment from 'moment';
 
 type ControlsState = {
   text: string,
-  endTime: number,
+  expired: number,
   color: string
 }
 
@@ -20,7 +20,7 @@ export function Controls() {
   const [placeholder, setPlaceholder] = useState('');
   const [state, setState] = useState<ControlsState>({
     text: '',
-    endTime: 0,
+    expired: 0,
     color: '#FFFFFF'
   });
 
@@ -51,7 +51,7 @@ export function Controls() {
     const targetTime = new Date(target.value).getTime();
     setState(state => {
       return {
-        ...state, endTime: targetTime
+        ...state, expired: targetTime
       }
     })
   }
@@ -68,7 +68,7 @@ export function Controls() {
     const note = {
       ...state,
       id: uniqid(),
-      status: getDelta(state.endTime) > 0 ? NoteStatus.Waiting : NoteStatus.Completed
+      status: moment().diff(state.expired) < 0 ? NoteStatus.Waiting : NoteStatus.Completed
     } as NoteType;
     dispatch(addNote(note));
     setState({...state, text: ''});
@@ -96,7 +96,7 @@ export function Controls() {
             id="date"
             label="End Time"
             type="datetime-local"
-            defaultValue={dateFormat(state.endTime, "yyyy-mm-dd'T'HH:MM")}
+            defaultValue={dateFormat(state.expired, "yyyy-mm-dd'T'HH:MM")}
             InputLabelProps={{
               shrink: true,
             }}
