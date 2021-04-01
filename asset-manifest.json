@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Remme/static/css/main.0ac73293.chunk.css",
+    "main.js": "/Remme/static/js/main.c75ec1f5.chunk.js",
+    "main.js.map": "/Remme/static/js/main.c75ec1f5.chunk.js.map",
+    "runtime-main.js": "/Remme/static/js/runtime-main.06f13cf5.js",
+    "runtime-main.js.map": "/Remme/static/js/runtime-main.06f13cf5.js.map",
+    "static/js/2.4f80a5e5.chunk.js": "/Remme/static/js/2.4f80a5e5.chunk.js",
+    "static/js/2.4f80a5e5.chunk.js.map": "/Remme/static/js/2.4f80a5e5.chunk.js.map",
+    "index.html": "/Remme/index.html",
+    "precache-manifest.190388c5269104262b6a2170de43b9a7.js": "/Remme/precache-manifest.190388c5269104262b6a2170de43b9a7.js",
+    "service-worker.js": "/Remme/service-worker.js",
+    "static/css/main.0ac73293.chunk.css.map": "/Remme/static/css/main.0ac73293.chunk.css.map",
+    "static/js/2.4f80a5e5.chunk.js.LICENSE.txt": "/Remme/static/js/2.4f80a5e5.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.06f13cf5.js",
+    "static/js/2.4f80a5e5.chunk.js",
+    "static/css/main.0ac73293.chunk.css",
+    "static/js/main.c75ec1f5.chunk.js"
+  ]
+}
